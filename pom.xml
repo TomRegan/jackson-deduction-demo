@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!-- this is not an actively maintained project! -->
+        <!-- please check for the latest library version -->
+        <version>3.3.1</version>
+        <relativePath/>
+    </parent>
+    <groupId>io.tomregan</groupId>
+    <artifactId>sorry-ms-jackson</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>Sorry Ms. Jackson Demo</name>
+    <description>Companion to the Sorry Ms. Jackson post</description>
+    <url>https://github.com/TomRegan/sorry-ms-jackson-demo</url>
+
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Tom Regan</name>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <dependencyManagement>
+        <!-- this is not an actively maintained project! -->
+        <!-- please check for the latest library version -->
+        <dependencies>
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>rest-assured-bom</artifactId>
+                <version>5.4.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- spring-boot-starter-web provides all the Jackson dependencies     -->
+        <!--                                                                   -->
+        <!-- org.springframework.boot:spring-boot-starter-web                  -->
+        <!-- └─ org.springframework.boot:spring-boot-starter-json              -->
+        <!--    ├─ com.fasterxml.jackson.core:jackson-databind                 -->
+        <!--    │  ├─ com.fasterxml.jackson.core:jackson-annotations           -->
+        <!--    │  └─ com.fasterxml.jackson.core:jackson-core                  -->
+        <!--    ├─ com.fasterxml.jackson.datatype:jackson-datatype-jdk8        -->
+        <!--    ├─ com.fasterxml.jackson.datatype:jackson-datatype-jsr310      -->
+        <!--    └─ com.fasterxml.jackson.module:jackson-module-parameter-names -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <!-- spring-boot-starter-validation provides all the Jakarta Validation dependencies -->
+        <!--                                                                                 -->
+        <!-- org.springframework.boot:spring-boot-starter-validation                         -->
+        <!-- └─ org.hibernate.validator:hibernate-validator                                  -->
+        <!--    └─ jakarta.validation:jakarta.validation-api                                 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <!-- spring-boot-starter-test provides JUnit and Hamcrest dependencies           -->
+        <!--                                                                             -->
+        <!-- org.springframework.boot:spring-boot-starter-test                           -->
+        <!-- ├─ org.hamcrest:hamcrest                                                    -->
+        <!-- └─ org.junit.jupiter:junit-jupiter                                          -->
+        <!--    ├─ org.junit.jupiter:junit-jupiter-api                                   -->
+        <!--    │  └─ org.junit.platform:junit-platform-commons                          -->
+        <!--    ├─ org.junit.jupiter:junit-jupiter-params                                -->
+        <!--    └─ org.junit.jupiter:junit-jupiter-engine                                -->
+        <!--       └─ org.junit.platform:junit-platform-engine                           -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>spring-mock-mvc</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
