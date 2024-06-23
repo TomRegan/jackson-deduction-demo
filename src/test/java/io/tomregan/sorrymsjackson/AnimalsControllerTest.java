@@ -1,16 +1,12 @@
 package io.tomregan.sorrymsjackson;
 
 
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
 import org.junit.jupiter.api.Test;
 
-import io.restassured.http.ContentType;
-import io.tomregan.sorrymsjackson.Application.AnimalsController;
-
-final class AnimalsControllerTest {
+final class AnimalsControllerTest implements AnimalsControllerTestFixture {
 
     @Test
     void intergalactic_animal_is_valid() {
@@ -24,9 +20,7 @@ final class AnimalsControllerTest {
                   }
                 }""";
 
-        given().standaloneSetup(new AnimalsController())
-                .contentType(ContentType.JSON)
-                .body(input)
+        givenJson(input)
                 .when()
                 .post("/animals")
                 .then()
@@ -45,9 +39,7 @@ final class AnimalsControllerTest {
                   }
                 }""";
 
-        given().standaloneSetup(new AnimalsController())
-                .contentType(ContentType.JSON)
-                .body(input)
+        givenJson(input)
                 .when()
                 .post("/animals")
                 .then()
@@ -66,9 +58,7 @@ final class AnimalsControllerTest {
                   }
                 }""";
 
-        given().standaloneSetup(new AnimalsController())
-                .contentType(ContentType.JSON)
-                .body(input)
+        givenJson(input)
                 .when()
                 .post("/animals")
                 .then()
