@@ -1,4 +1,4 @@
-package io.tomregan.sorrymsjackson;
+package io.tomregan.jackson;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 import io.restassured.http.ContentType;

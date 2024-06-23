@@ -1,6 +1,6 @@
-## Sorry Ms. Jackson Demo
+## Jackson Deduction Demo
 
-Companion to the Sorry Ms. Jackson post at [https://tomregan.github.io](https://tomregan.github.io).
+Companion to the Using Jackson Deduction to Simplify Deserialisation post at [https://tomregan.github.io](https://tomregan.github.io).
 
 ### Getting Started
 

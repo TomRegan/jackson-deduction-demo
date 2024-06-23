@@ -11,12 +11,12 @@
         <relativePath/>
     </parent>
     <groupId>io.tomregan</groupId>
-    <artifactId>sorry-ms-jackson</artifactId>
+    <artifactId>jackson-deduction-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>Sorry Ms. Jackson Demo</name>
-    <description>Companion to the Sorry Ms. Jackson post</description>
-    <url>https://github.com/TomRegan/sorry-ms-jackson-demo</url>
+    <name>Jackson Deduction Demo</name>
+    <description>Companion to the Using Jackson Deduction to Simplify Deserialisation post</description>
+    <url>https://github.com/TomRegan/jackson-deduction-demo</url>
 
     <licenses>
         <license>

@@ -1,8 +1,8 @@
-package io.tomregan.sorrymsjackson;
+package io.tomregan.jackson;
 
 import static com.fasterxml.jackson.annotation.JsonTypeInfo.Id.DEDUCTION;
-import static io.tomregan.sorrymsjackson.Application.AnimalSpottedEvent.*;
-import static io.tomregan.sorrymsjackson.Application.AnimalSpottedEvent.Animal.*;
+import static io.tomregan.jackson.Application.AnimalSpottedEvent.*;
+import static io.tomregan.jackson.Application.AnimalSpottedEvent.Animal.*;
 
 import java.time.Instant;
 
@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-import io.tomregan.sorrymsjackson.Application.AnimalSpottedEvent.Animal.IntergalacticAnimal;
+import io.tomregan.jackson.Application.AnimalSpottedEvent.Animal.IntergalacticAnimal;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 

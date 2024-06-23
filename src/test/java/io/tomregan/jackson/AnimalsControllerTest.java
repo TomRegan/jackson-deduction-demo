@@ -1,4 +1,4 @@
-package io.tomregan.sorrymsjackson;
+package io.tomregan.jackson;
 
 
 import static org.hamcrest.Matchers.equalTo;
